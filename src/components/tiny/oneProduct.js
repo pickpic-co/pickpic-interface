@@ -9,7 +9,7 @@ const ProductSearch = () => {
 
   return (
   <div className="ProductSearch-background">
-    <h2>Product view </h2>
+    <h2>Product Name </h2>
       product search component
       <Button type="primary"> Search </Button>
       <Button type="primary" onClick={() => dispatch(showProductSearch())}> Close Search </Button>
