@@ -2,19 +2,32 @@ import React from 'react';
 
 
 import ProductSearch from '../components/productSearch';
-const { useState } = React;
+import { useSelector,useDispatch } from 'react-redux';
+import {increment,showProductSearch} from '../actions';
+
 
 // const [count, setCount] = useState(0)
 
 const ProductView = () => {
 
 
-const [showSearch, setShowSearch] = useState(false)
+const counter = useSelector(state => state.counter);
+const isLogged = useSelector(state => state.isLogged);
+const isShowProductSearch = useSelector(state => state.showProductSearch)
+const dispatch = useDispatch();
+
 
 return(
   <div className="ProductView-background">
-    <h2>Product Search </h2>
-    <ProductSearch/>
+   {
+   isShowProductSearch ? <ProductSearch style={{zIndex: 500}}/> :
+    <div>
+        <h2>Product Search {counter}</h2>
+        <button onClick={() => dispatch(showProductSearch())} > show search </button>
+        <button onClick={() => dispatch(increment())} > + </button>
+    </div> 
+ }
+
   </div>
 )};
 

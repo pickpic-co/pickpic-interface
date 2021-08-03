@@ -3,11 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createStore,applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk' //middleware to accept Api calls in resdux
+import { composeWithDevTools } from 'redux-devtools-extension'
+import allReducer from './reducers';
+import { Provider } from 'react-redux';
+
+
+const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware))
+
+
+const store = createStore(
+  allReducer,composedEnhancer
+  );
 
 ReactDOM.render(
-  <React.StrictMode>
+  
+  <Provider store= {store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
