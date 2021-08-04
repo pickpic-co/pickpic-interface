@@ -1,10 +1,5 @@
 
 
-:root {
-  --main: #ffffff;
-  --theme: #ff0000;
-  }
-  
 
 .celebrity-hero-background {
   position: fixed;
@@ -12,6 +7,13 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background-size: cover;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.60)), url('https://wallpaperaccess.com/full/1484671.jpg');
+}
+
+.celebrity-card-background {
+  width: 100;
+  height: 100;
   background-size: cover;
   background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.60)), url('https://wallpaperaccess.com/full/1484671.jpg');
 }
@@ -44,11 +46,6 @@
   letter-spacing: -1.5px;
 }
 
-.wrapper{
-  max-height: 180px;
-  display: flex;
-  overflow-x: auto;
-}
 
 .wrapper .item{
   min-width: 110px;

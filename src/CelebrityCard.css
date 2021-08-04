@@ -1,0 +1,66 @@
+@import 
+url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+
+/* color variables */
+:root {
+    --main: #ffffff;
+    --theme: #ff0000;
+}
+
+
+.body{
+    font-family: Oxygen, sans-serif;
+    margin: 2rem;
+}
+
+.CelebrityCard{
+    overflow: hidden;
+    box-shadow: 0 2px 20px var(--main);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+}
+
+.CelebrityCard:hover{
+    transform: scale(1.02);
+}
+
+.celebrityCardImage{
+    height: 10rem;
+    width: 95%;
+    object-fit: cover;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.60)), url('https://wallpaperaccess.com/full/1484671.jpg');
+}
+
+.celebrityName{
+    padding: 1rem;
+    color: var(--main);
+}
+
+.celebrityFollowers{
+    padding: 0 1rem;
+    color: var(--main);
+}
+
+.celebrityCardButton{
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    transition: background 200ms ease-in color 200ms ease-in;
+    color: var(--main);
+    border: 2px solid var(--theme);
+    background: transparent;
+    color: ar(--main);
+    border-radius: 2rem;
+}
+
+.celebrityCardButton:hover
+{
+    background: var(--main);
+    color: var(--theme);
+}
