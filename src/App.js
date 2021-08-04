@@ -38,12 +38,10 @@ function App() {
         <div class="heading-text" style={{marginLeft: '80vw'}}>8.00ETH</div>
         <div class="small-text" style={{marginLeft: '80vw', textTransform: 'lowercase'}}><b>8</b> h <b>8</b> m left</div>
         <button class="button bid-button" style={{marginLeft: '80vw', marginTop: '1.5vh'}}>BID NOW !&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-        <ScrollMenu 
-          //LeftArrow={LeftArrow}
-          //RightArrow={RightArrow}
-        >
+        <ScrollMenu>
           {items.map(({ id }) => (
             <CelebrityCard
+              //img = '/assets/1.png'
               img = 'https://wallpaperaccess.com/full/1484671.jpg'
               itemId={id} // NOTE: itemId is required for track items
               name={id}
@@ -52,7 +50,6 @@ function App() {
               selected={isItemSelected(id)}
             />)
           )}
-
         </ScrollMenu>        
       </div>
     );

@@ -4,12 +4,11 @@ import React from 'react';
 function CelebrityCard(props){
     return(
       <div className="CelebrityCard">
-        <div className="CardBody">
-          <div class="small-text" style={{marginLeft: '2vw'}}>{props.name}</div>
-          <div class="small-text" style={{marginLeft: '2vw'}}>{props.handle}</div>
-          <h2 className="celebrityName">{props.name}</h2>
-          <h3 className="celebrityName">{props.handle}</h3>
-          <p className="celebrityFollowers">{props.followers}</p>
+        <div class="container">
+        <img src={props.img} class="celebrityCardImage"/>
+          <div class="centered">Centered</div>
+          <div class="small-text">{props.name}</div>
+          <div class="small-text">{props.handle}</div>
         </div>
         <button className="celebrityCardButton">
           BID NOW

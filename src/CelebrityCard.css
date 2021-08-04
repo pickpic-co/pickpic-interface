@@ -14,6 +14,7 @@ url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=sw
 }
 
 .CelebrityCard{
+    color: white;
     overflow: hidden;
     box-shadow: 0 2px 20px var(--main);
     border-radius: 5px;
@@ -24,16 +25,37 @@ url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=sw
     transition: transform 200ms ease-in;
 }
 
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 .CelebrityCard:hover{
     transform: scale(1.02);
 }
 
 .celebrityCardImage{
-    height: 10rem;
-    width: 95%;
+    height: 8rem;
+    width: 90%;
     object-fit: cover;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.60)), url('https://wallpaperaccess.com/full/1484671.jpg');
+    background-size: cover;
 }
+
+.celebrityCardImage:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.60));
+  }
 
 .celebrityName{
     padding: 1rem;
