@@ -5,10 +5,12 @@ function CelebrityCard(props){
     return(
       <div className="CelebrityCard">
         <div class="container">
-        <img src={props.img} class="celebrityCardImage"/>
-          <div class="centered">Centered</div>
-          <div class="small-text">{props.name}</div>
-          <div class="small-text">{props.handle}</div>
+          <img src={props.img} class="celebrityCardImage"/>
+          <div className="dark-overlay">
+            <div class="centered">Centered</div>
+            <div class="small-text">{props.name}</div>
+            <div class="small-text">{props.handle}</div>
+        </div>
         </div>
         <button className="celebrityCardButton">
           BID NOW

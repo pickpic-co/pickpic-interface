@@ -42,7 +42,7 @@ function App() {
           {items.map(({ id }) => (
             <CelebrityCard
               //img = '/assets/1.png'
-              img = 'https://wallpaperaccess.com/full/1484671.jpg'
+              img = 'https://s.wsj.net/public/resources/images/OD-BG400_20ODDa_8V_20150520191535.jpg'
               itemId={id} // NOTE: itemId is required for track items
               name={id}
               handle={id}

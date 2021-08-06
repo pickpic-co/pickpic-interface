@@ -13,7 +13,18 @@ url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=sw
     margin: 2rem;
 }
 
+/*radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.60))*/
+.dark-overlay {
+    background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.90));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
 .CelebrityCard{
+    
     color: white;
     overflow: hidden;
     box-shadow: 0 2px 20px var(--main);
