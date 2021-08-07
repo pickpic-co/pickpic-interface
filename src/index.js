@@ -9,13 +9,14 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import allReducer from './reducers';
 import { Provider } from 'react-redux';
 
-
-const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware))
+const initialState = {};
+const middleware = [thunkMiddleware]
+const composedEnhancer = composeWithDevTools(applyMiddleware(...middleware))
 
 
 const store = createStore(
-  allReducer,composedEnhancer
-  );
+  allReducer,initialState,composedEnhancer
+);
 
 ReactDOM.render(
   
