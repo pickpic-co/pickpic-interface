@@ -4,7 +4,7 @@ import {
     UPDATE_PRODUCT,
     DELETE_PRODUCT,
     DELETE_ALL_PRODUCTS
-  } from "..actions/types";
+  } from "../actions/type";
 
   const initialState = [];
 
